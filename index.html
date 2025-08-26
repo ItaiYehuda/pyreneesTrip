@@ -1,55 +1,52 @@
 <!DOCTYPE html>
+
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Explorer</title>
-  <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css"/>
-  <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
-  <script src="https://unpkg.com/papaparse@5.3.2/papaparse.min.js"></script>
-  <link rel="stylesheet" href="styles.css"/>
-</head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Explorer</title>
+<link href="https://unpkg.com/leaflet/dist/leaflet.css" rel="stylesheet"/>
+<script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+<script src="https://unpkg.com/papaparse@5.3.2/papaparse.min.js"></script>
+<style>
+    body { font-family: Arial, sans-serif; margin: 0; padding: 0; background: #f9f9f9; }
+    nav { background: #111; display: flex; justify-content: center; }
+    nav button { background: #111; color: white; border: none; padding: 12px 20px; cursor: pointer; font-size: 16px; }
+    nav button.active { background: #333; }
+    nav button:hover { background: #555; }
+    .tab { display: none; padding: 20px; }
+    table { border-collapse: collapse; width: 100%; margin-top: 10px; }
+    th, td { border: 1px solid #ccc; padding: 8px; text-align: left; }
+    th { background: #333; color: white; }
+    tr:nth-child(even) { background: #f2f2f2; }
+    a.hike-link { color: #0066cc; text-decoration: none; font-weight: bold; }
+    a.hike-link:hover { text-decoration: underline; }
+    #mapContainer { height: 80vh; width: 100%; border: 2px solid #111; margin-top: 10px; }
+    .popup-content { font-size: 14px; line-height: 1.4; }
+    .popup-title { font-weight: bold; font-size: 16px; margin-bottom: 5px; color: #222; }
+    .popup-info { margin-bottom: 5px; }
+    .popup-link { display: inline-block; margin-top: 5px; padding: 4px 8px; background: #111; color: white; text-decoration: none; border-radius: 4px; font-size: 13px; }
+    .popup-link:hover { background: #444; }
+  </style>
+<link href="styles.css" rel="stylesheet"/></head>
 <body>
-  <nav>
-    <button onclick="openTab('hikes')">Hikes</button>
-    <button onclick="openTab('accommodations')">Accommodations</button>
-    <button onclick="openTab('attractions')">Attractions</button>
-    <button onclick="openTab('map')">Map</button>
-  </nav>
-
-  <div id="searchBarContainer">
-    <input id="globalSearch" type="search" placeholder="Search visible table…" aria-label="Search"/>
-    <small>Tip: filters the currently open tab.</small>
-  </div>
-
-  <div id="hikes" class="tab"></div>
-  <div id="accommodations" class="tab"></div>
-  <div id="attractions" class="tab"></div>
-  <div id="map" class="tab"><div id="mapContainer"></div></div>
-
-  <script>
-    // Safe tab switcher: no reliance on 'event'
+<nav>
+<button onclick="openTab('hikes')">Hikes</button>
+<button onclick="openTab('accommodations')">Accommodations</button>
+<button onclick="openTab('attractions')">Attractions</button>
+<button onclick="openTab('map')">Map</button>
+</nav><div id="searchBarContainer"><input aria-label="Search" id="globalSearch" placeholder="Search visible table…" type="search"/><small>Tip: filters the currently open tab.</small></div>
+<div class="tab" id="hikes"></div>
+<div class="tab" id="accommodations"></div>
+<div class="tab" id="attractions"></div>
+<div class="tab" id="map"><div id="mapContainer"></div></div>
+<script>
     function openTab(tabId) {
-      // Hide all tabs
       document.querySelectorAll('.tab').forEach(t => t.style.display = 'none');
-
-      // Show requested tab
-      var tab = document.getElementById(tabId);
-      if (tab) tab.style.display = 'block';
-
-      // Update active button (match by onclick attribute)
+      document.getElementById(tabId).style.display = 'block';
       document.querySelectorAll('nav button').forEach(b => b.classList.remove('active'));
-      var btn = document.querySelector('nav button[onclick="openTab(\\'' + tabId + '\\')"]');
-      if (!btn) {
-        // Fallback selector for normal quotes
-        btn = document.querySelector('nav button[onclick="openTab(\'' + tabId + '\')"]');
-      }
-      if (btn) btn.classList.add('active');
-
-      // Fix map sizing when the map tab becomes visible
-      if (tabId === 'map' && typeof map !== 'undefined' && map.invalidateSize) {
-        setTimeout(function(){ map.invalidateSize(); }, 0);
-      }
+      event.target.classList.add('active');
+      if(tabId === 'map') { map.invalidateSize(); }
     }
 
     function loadCSV(file, containerId, icon, isHikes=false) {
@@ -58,23 +55,24 @@
         download: true,
         complete: function(results) {
           const data = results.data.filter(row => row.Name);
-          if (containerId !== 'map') {
+          if(containerId !== 'map') {
             const container = document.getElementById(containerId);
-            if (!data.length) { container.innerHTML = '<p>No data.</p>'; return; }
             let table = '<table><tr>';
             Object.keys(data[0]).forEach(k => {
-              if (k !== 'Latitude' && k !== 'Longitude') table += '<th>' + k + '</th>';
+              if(k !== 'Latitude' && k !== 'Longitude') {
+                table += '<th>' + k + '</th>';
+              }
             });
             table += '</tr>';
             data.forEach(row => {
               table += '<tr>';
               Object.entries(row).forEach(([k,v]) => {
-                if (k !== 'Latitude' && k !== 'Longitude') {
-                  if (isHikes && k === 'Name') {
-                    const q = encodeURIComponent(v || '');
-                    table += '<td><a class="hike-link" href="https://www.google.com/search?q=' + q + '" target="_blank">' + (v || '') + '</a></td>';
+                if(k !== 'Latitude' && k !== 'Longitude') {
+                  if(isHikes && k === 'Name') {
+                    const q = encodeURIComponent(v);
+                    table += '<td><a class="hike-link" href="https://www.google.com/search?q=' + q + '" target="_blank">' + v + '</a></td>';
                   } else {
-                    table += '<td>' + (v || '') + '</td>';
+                    table += '<td>' + v + '</td>';
                   }
                 }
               });
@@ -84,21 +82,23 @@
             container.innerHTML = table;
           } else {
             data.forEach(row => {
-              const lat = parseFloat(row.Latitude);
-              const lon = parseFloat(row.Longitude);
-              if (!isNaN(lat) && !isNaN(lon)) {
-                const marker = L.marker([lat, lon], { icon: icon }).addTo(map);
-                let popupContent = '<div class="popup-content">';
-                popupContent += '<div class="popup-title">' + (row.Name || '') + '</div>';
-                for (const [k,v] of Object.entries(row)) {
-                  if (k !== 'Latitude' && k !== 'Longitude' && v) {
-                    popupContent += '<div class="popup-info"><b>' + k + ':</b> ' + v + '</div>';
+              if(row.Latitude && row.Longitude) {
+                const lat = parseFloat(row.Latitude);
+                const lon = parseFloat(row.Longitude);
+                if(!isNaN(lat) && !isNaN(lon)) {
+                  const marker = L.marker([lat, lon], { icon: icon }).addTo(map);
+                  let popupContent = '<div class="popup-content">';
+                  popupContent += '<div class="popup-title">' + row.Name + '</div>';
+                  for(const [k,v] of Object.entries(row)) {
+                    if(k !== 'Latitude' && k !== 'Longitude' && v) {
+                      popupContent += '<div class="popup-info"><b>' + k + ':</b> ' + v + '</div>';
+                    }
                   }
+                  const q = encodeURIComponent(row.Name);
+                  popupContent += '<a class="popup-link" href="https://www.google.com/search?q=' + q + '" target="_blank">🔎 Search on Google</a>';
+                  popupContent += '</div>';
+                  marker.bindPopup(popupContent);
                 }
-                const q = encodeURIComponent(row.Name || '');
-                popupContent += '<a class="popup-link" href="https://www.google.com/search?q=' + q + '" target="_blank">🔎 Search on Google</a>';
-                popupContent += '</div>';
-                marker.bindPopup(popupContent);
               }
             });
           }
@@ -106,6 +106,7 @@
       });
     }
 
+    // Custom icons (Leaflet pin colors)
     function coloredIcon(color) {
       return new L.Icon({
         iconUrl: 'https://raw.githubusercontent.com/pointhi/leaflet-color-markers/master/img/marker-icon-2x-' + color + '.png',
@@ -123,9 +124,11 @@
 
     // Leaflet map
     var map = L.map('mapContainer').setView([42.5, 1.5], 7);
-    L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', { maxZoom: 19 }).addTo(map);
+    L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+      maxZoom: 19
+    }).addTo(map);
 
-    // Load data
+    // Load data with icons
     loadCSV('data/hikes.csv', 'hikes', blueIcon, true);
     loadCSV('data/accommodations.csv', 'accommodations', greenIcon);
     loadCSV('data/attractions.csv', 'attractions', redIcon);
@@ -133,40 +136,43 @@
     loadCSV('data/accommodations.csv', 'map', greenIcon);
     loadCSV('data/attractions.csv', 'map', redIcon);
 
-    // Open Map by default (and mark Map button active)
-    openTab('map');
+    // Default open
+    openTab('hikes');
   </script>
-
-  <!-- Search filter (non-destructive) -->
-  <script>
-    (function(){
-      function filterVisibleTable(q){
-        var tabs = document.querySelectorAll('.tab');
-        var active = Array.prototype.find.call(tabs, function(t){ return t.style.display !== 'none'; });
-        if(!active) return;
-        var table = active.querySelector('table');
-        if(!table) return;
-        var rows = table.querySelectorAll('tbody tr, tr');
-        var qnorm = (q||'').trim().toLowerCase();
-        Array.prototype.forEach.call(rows, function(row){
-          var isHeader = row.querySelector('th') !== null;
-          if(isHeader) return;
-          var text = row.textContent.toLowerCase();
-          row.style.display = text.includes(qnorm) ? '' : 'none';
-        });
-      }
-      var input = document.getElementById('globalSearch');
-      if(input){
-        input.addEventListener('input', function(e){
-          filterVisibleTable(e.target.value);
-        });
-        var originalOpenTab = window.openTab;
-        window.openTab = function(tabId){
-          if(typeof originalOpenTab === 'function') originalOpenTab(tabId);
-          setTimeout(function(){ filterVisibleTable(input.value); }, 0);
-        };
-      }
-    })();
-  </script>
-</body>
+<script>
+// Lightweight search that filters the currently visible tab's table rows.
+// Does not modify existing code; safe no-op if no table is present.
+(function(){
+  function filterVisibleTable(q){
+    var tabs = document.querySelectorAll('.tab');
+    var active = Array.prototype.find.call(tabs, function(t){ return t.style.display !== 'none'; });
+    if(!active) return;
+    var table = active.querySelector('table');
+    if(!table) return;
+    var rows = table.querySelectorAll('tbody tr, tr'); // support tables with/without <tbody>
+    var qnorm = (q||'').trim().toLowerCase();
+    Array.prototype.forEach.call(rows, function(row, idx){
+      // skip header row
+      var isHeader = row.querySelector('th') !== null;
+      if(isHeader) return;
+      var text = row.textContent.toLowerCase();
+      var match = text.indexOf(qnorm) !== -1;
+      row.style.display = match ? '' : 'none';
+    });
+  }
+  var input = document.getElementById('globalSearch');
+  if(input){
+    input.addEventListener('input', function(e){
+      filterVisibleTable(e.target.value);
+    });
+    // Re-apply filter whenever tabs switch (monkey-patch openTab without overriding)
+    var originalOpenTab = window.openTab;
+    window.openTab = function(tabId){
+      if(typeof originalOpenTab === 'function') originalOpenTab(tabId);
+      // slight delay to allow table render
+      setTimeout(function(){ filterVisibleTable(input.value); }, 0);
+    };
+  }
+})();
+</script></body>
 </html>
