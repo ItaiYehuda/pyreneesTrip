@@ -7,11 +7,9 @@
   <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css"/>
   <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
   <script src="https://unpkg.com/papaparse@5.3.2/papaparse.min.js"></script>
-  <!-- Added external CSS for cleaner design -->
   <link rel="stylesheet" href="styles.css"/>
 </head>
 <body>
-  <!-- Navigation bar -->
   <nav>
     <button onclick="openTab('hikes')">Hikes</button>
     <button onclick="openTab('accommodations')">Accommodations</button>
@@ -19,55 +17,64 @@
     <button onclick="openTab('map')">Map</button>
   </nav>
 
-  <!-- Search bar below nav -->
   <div id="searchBarContainer">
     <input id="globalSearch" type="search" placeholder="Search visible table…" aria-label="Search"/>
     <small>Tip: filters the currently open tab.</small>
   </div>
 
-  <!-- Content sections -->
   <div id="hikes" class="tab"></div>
   <div id="accommodations" class="tab"></div>
   <div id="attractions" class="tab"></div>
-  <div id="map" class="tab">
-    <div id="mapContainer"></div>
-  </div>
+  <div id="map" class="tab"><div id="mapContainer"></div></div>
 
   <script>
-    // Tab switching
+    // Safe tab switcher: no reliance on 'event'
     function openTab(tabId) {
+      // Hide all tabs
       document.querySelectorAll('.tab').forEach(t => t.style.display = 'none');
-      document.getElementById(tabId).style.display = 'block';
+
+      // Show requested tab
+      var tab = document.getElementById(tabId);
+      if (tab) tab.style.display = 'block';
+
+      // Update active button (match by onclick attribute)
       document.querySelectorAll('nav button').forEach(b => b.classList.remove('active'));
-      event.target.classList.add('active');
-      if(tabId === 'map') { map.invalidateSize(); }
+      var btn = document.querySelector('nav button[onclick="openTab(\\'' + tabId + '\\')"]');
+      if (!btn) {
+        // Fallback selector for normal quotes
+        btn = document.querySelector('nav button[onclick="openTab(\'' + tabId + '\')"]');
+      }
+      if (btn) btn.classList.add('active');
+
+      // Fix map sizing when the map tab becomes visible
+      if (tabId === 'map' && typeof map !== 'undefined' && map.invalidateSize) {
+        setTimeout(function(){ map.invalidateSize(); }, 0);
+      }
     }
 
-    // Load CSV data into tables and map markers
     function loadCSV(file, containerId, icon, isHikes=false) {
       Papa.parse(file, {
         header: true,
         download: true,
         complete: function(results) {
           const data = results.data.filter(row => row.Name);
-          if(containerId !== 'map') {
+          if (containerId !== 'map') {
             const container = document.getElementById(containerId);
+            if (!data.length) { container.innerHTML = '<p>No data.</p>'; return; }
             let table = '<table><tr>';
             Object.keys(data[0]).forEach(k => {
-              if(k !== 'Latitude' && k !== 'Longitude') {
-                table += '<th>' + k + '</th>';
-              }
+              if (k !== 'Latitude' && k !== 'Longitude') table += '<th>' + k + '</th>';
             });
             table += '</tr>';
             data.forEach(row => {
               table += '<tr>';
               Object.entries(row).forEach(([k,v]) => {
-                if(k !== 'Latitude' && k !== 'Longitude') {
-                  if(isHikes && k === 'Name') {
-                    const q = encodeURIComponent(v);
-                    table += '<td><a class="hike-link" href="https://www.google.com/search?q=' + q + '" target="_blank">' + v + '</a></td>';
+                if (k !== 'Latitude' && k !== 'Longitude') {
+                  if (isHikes && k === 'Name') {
+                    const q = encodeURIComponent(v || '');
+                    table += '<td><a class="hike-link" href="https://www.google.com/search?q=' + q + '" target="_blank">' + (v || '') + '</a></td>';
                   } else {
-                    table += '<td>' + v + '</td>';
+                    table += '<td>' + (v || '') + '</td>';
                   }
                 }
               });
@@ -77,23 +84,21 @@
             container.innerHTML = table;
           } else {
             data.forEach(row => {
-              if(row.Latitude && row.Longitude) {
-                const lat = parseFloat(row.Latitude);
-                const lon = parseFloat(row.Longitude);
-                if(!isNaN(lat) && !isNaN(lon)) {
-                  const marker = L.marker([lat, lon], { icon: icon }).addTo(map);
-                  let popupContent = '<div class="popup-content">';
-                  popupContent += '<div class="popup-title">' + row.Name + '</div>';
-                  for(const [k,v] of Object.entries(row)) {
-                    if(k !== 'Latitude' && k !== 'Longitude' && v) {
-                      popupContent += '<div class="popup-info"><b>' + k + ':</b> ' + v + '</div>';
-                    }
+              const lat = parseFloat(row.Latitude);
+              const lon = parseFloat(row.Longitude);
+              if (!isNaN(lat) && !isNaN(lon)) {
+                const marker = L.marker([lat, lon], { icon: icon }).addTo(map);
+                let popupContent = '<div class="popup-content">';
+                popupContent += '<div class="popup-title">' + (row.Name || '') + '</div>';
+                for (const [k,v] of Object.entries(row)) {
+                  if (k !== 'Latitude' && k !== 'Longitude' && v) {
+                    popupContent += '<div class="popup-info"><b>' + k + ':</b> ' + v + '</div>';
                   }
-                  const q = encodeURIComponent(row.Name);
-                  popupContent += '<a class="popup-link" href="https://www.google.com/search?q=' + q + '" target="_blank">🔎 Search on Google</a>';
-                  popupContent += '</div>';
-                  marker.bindPopup(popupContent);
                 }
+                const q = encodeURIComponent(row.Name || '');
+                popupContent += '<a class="popup-link" href="https://www.google.com/search?q=' + q + '" target="_blank">🔎 Search on Google</a>';
+                popupContent += '</div>';
+                marker.bindPopup(popupContent);
               }
             });
           }
@@ -101,7 +106,6 @@
       });
     }
 
-    // Leaflet custom colored markers
     function coloredIcon(color) {
       return new L.Icon({
         iconUrl: 'https://raw.githubusercontent.com/pointhi/leaflet-color-markers/master/img/marker-icon-2x-' + color + '.png',
@@ -117,13 +121,11 @@
     var greenIcon = coloredIcon('green');
     var redIcon = coloredIcon('red');
 
-    // Initialize map
+    // Leaflet map
     var map = L.map('mapContainer').setView([42.5, 1.5], 7);
-    L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
-      maxZoom: 19
-    }).addTo(map);
+    L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', { maxZoom: 19 }).addTo(map);
 
-    // Load datasets
+    // Load data
     loadCSV('data/hikes.csv', 'hikes', blueIcon, true);
     loadCSV('data/accommodations.csv', 'accommodations', greenIcon);
     loadCSV('data/attractions.csv', 'attractions', redIcon);
@@ -131,11 +133,11 @@
     loadCSV('data/accommodations.csv', 'map', greenIcon);
     loadCSV('data/attractions.csv', 'map', redIcon);
 
-    // Default open tab = MAP
+    // Open Map by default (and mark Map button active)
     openTab('map');
   </script>
 
-  <!-- Lightweight search script -->
+  <!-- Search filter (non-destructive) -->
   <script>
     (function(){
       function filterVisibleTable(q){
