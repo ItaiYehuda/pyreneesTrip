@@ -1,0 +1,111 @@
+Name,Location,Country,Distance (km),Time (hrs),Difficulty,Ascent (m),Descent (m),Description,Latitude,Longitude
+Lac de Gaube,Cauterets,France,3.0,1.5,Easy,250,250,Crystal clear alpine lake surrounded by peaks.,42.58727005942368,-0.48586991480181196
+Estany de Sant Maurici,Espot,Spain,4.5,2.0,Easy,300,300,Iconic lake in Aigüestortes National Park with mountain backdrop.,42.87535715320496,-0.9357254946109845
+Cirque de Gavarnie,Gavarnie,France,5.0,2.0,Easy,300,300,UNESCO site with massive cirque walls and waterfalls.,42.765996970905704,1.7539417831990058
+Ordesa Valley Floor,Torla-Ordesa,Spain,6.0,2.5,Easy,350,350,Walk along the lush valley floor with cliffs and waterfalls.,42.699329242098514,1.3284213284754594
+Pont d’Espagne Walk,Cauterets,France,2.5,1.0,Easy,150,150,Short stroll to scenic waterfalls and bridges.,42.47800932022122,0.7169131477864821
+Lac d’Estaing,Arrens-Marsous,France,3.0,1.0,Easy,100,100,Family-friendly lakeside walk with mountain views.,42.4779972601681,1.5501120656570118
+Ibones de Anayet,Formigal,Spain,5.5,2.5,Easy,350,350,Beautiful alpine lakes with views of Pico Anayet.,42.4290418060841,1.3128522691469007
+Bouillouses Lake,Les Angles,France,5.0,2.0,Easy,200,200,Picturesque reservoir with surrounding peaks.,42.83308807288746,-0.8470047938988745
+Lac Bleu,Luz-Saint-Sauveur,France,4.5,2.0,Easy,300,300,Stunning blue glacial lake in a cirque.,42.7005575058716,1.623956494714922
+Ruta de las Ermitas,Tella,Spain,4.0,1.5,Easy,200,200,Cultural walk visiting ancient hermitages.,42.75403628889802,0.3876978467047776
+Lac de Gaube Variant 1,Cauterets,France,3.0,1.5,Easy,250,250,Crystal clear alpine lake surrounded by peaks.,42.4102922471479,1.3260405430742188
+Estany de Sant Maurici Variant 1,Espot,Spain,4.5,2.0,Easy,300,300,Iconic lake in Aigüestortes National Park with mountain backdrop.,42.884954926080994,1.6363195497322263
+Cirque de Gavarnie Variant 1,Gavarnie,France,5.0,2.0,Easy,300,300,UNESCO site with massive cirque walls and waterfalls.,42.81622132040021,-0.3869878375984763
+Ordesa Valley Floor Variant 1,Torla-Ordesa,Spain,6.0,2.5,Easy,350,350,Walk along the lush valley floor with cliffs and waterfalls.,42.506169555339135,-1.1148182641531315
+Pont d’Espagne Walk Variant 1,Cauterets,France,2.5,1.0,Easy,150,150,Short stroll to scenic waterfalls and bridges.,42.49091248360355,-0.7022269311032041
+Lac d’Estaing Variant 1,Arrens-Marsous,France,3.0,1.0,Easy,100,100,Family-friendly lakeside walk with mountain views.,42.491702254926714,-0.00512273980810285
+Ibones de Anayet Variant 1,Formigal,Spain,5.5,2.5,Easy,350,350,Beautiful alpine lakes with views of Pico Anayet.,42.552121121479765,1.3630516807287258
+Bouillouses Lake Variant 1,Les Angles,France,5.0,2.0,Easy,200,200,Picturesque reservoir with surrounding peaks.,42.66237821581612,1.5125570413972023
+Lac Bleu Variant 1,Luz-Saint-Sauveur,France,4.5,2.0,Easy,300,300,Stunning blue glacial lake in a cirque.,42.615972509321054,-1.4756675431408326
+Ruta de las Ermitas Variant 1,Tella,Spain,4.0,1.5,Easy,200,200,Cultural walk visiting ancient hermitages.,42.54561457009902,0.28761555902147995
+Lac de Gaube Variant 2,Cauterets,France,3.0,1.5,Easy,250,250,Crystal clear alpine lake surrounded by peaks.,42.705926447361186,-0.03906148897927353
+Estany de Sant Maurici Variant 2,Espot,Spain,4.5,2.0,Easy,300,300,Iconic lake in Aigüestortes National Park with mountain backdrop.,42.46974693032602,-0.7226226633524442
+Cirque de Gavarnie Variant 2,Gavarnie,France,5.0,2.0,Easy,300,300,UNESCO site with massive cirque walls and waterfalls.,42.546072324267605,-1.0804712143321102
+Ordesa Valley Floor Variant 2,Torla-Ordesa,Spain,6.0,2.5,Easy,350,350,Walk along the lush valley floor with cliffs and waterfalls.,42.58318092164684,-0.31834690008730204
+Pont d’Espagne Walk Variant 2,Cauterets,France,2.5,1.0,Easy,150,150,Short stroll to scenic waterfalls and bridges.,42.62803499210852,1.8001839636938168
+Lac d’Estaing Variant 2,Arrens-Marsous,France,3.0,1.0,Easy,100,100,Family-friendly lakeside walk with mountain views.,42.7925879806965,-0.3687897379273566
+Ibones de Anayet Variant 2,Formigal,Spain,5.5,2.5,Easy,350,350,Beautiful alpine lakes with views of Pico Anayet.,42.49983689107918,0.3157671761017813
+Bouillouses Lake Variant 2,Les Angles,France,5.0,2.0,Easy,200,200,Picturesque reservoir with surrounding peaks.,42.6571172192068,0.9605663561331226
+Lac Bleu Variant 2,Luz-Saint-Sauveur,France,4.5,2.0,Easy,300,300,Stunning blue glacial lake in a cirque.,42.69620728443102,-0.22729639167247107
+Ruta de las Ermitas Variant 2,Tella,Spain,4.0,1.5,Easy,200,200,Cultural walk visiting ancient hermitages.,42.423225206359994,1.9012372895233622
+Lac de Gaube Variant 3,Cauterets,France,3.0,1.5,Easy,250,250,Crystal clear alpine lake surrounded by peaks.,42.70377242595072,1.8685655322973895
+Estany de Sant Maurici Variant 3,Espot,Spain,4.5,2.0,Easy,300,300,Iconic lake in Aigüestortes National Park with mountain backdrop.,42.48526206184364,-0.6187619646112255
+Cirque de Gavarnie Variant 3,Gavarnie,France,5.0,2.0,Easy,300,300,UNESCO site with massive cirque walls and waterfalls.,42.43252579649264,0.24036977062334897
+Ordesa Valley Floor Variant 3,Torla-Ordesa,Spain,6.0,2.5,Easy,350,350,Walk along the lush valley floor with cliffs and waterfalls.,42.874442768626665,-0.4469259156413061
+Pont d’Espagne Walk Variant 3,Cauterets,France,2.5,1.0,Easy,150,150,Short stroll to scenic waterfalls and bridges.,42.88281601653728,-0.5030582696788634
+Lac d’Estaing Variant 3,Arrens-Marsous,France,3.0,1.0,Easy,100,100,Family-friendly lakeside walk with mountain views.,42.80419867405823,-1.370895684259135
+Ibones de Anayet Variant 3,Formigal,Spain,5.5,2.5,Easy,350,350,Beautiful alpine lakes with views of Pico Anayet.,42.552306884586685,0.633475168929639
+Bouillouses Lake Variant 3,Les Angles,France,5.0,2.0,Easy,200,200,Picturesque reservoir with surrounding peaks.,42.44883605700319,0.25937658130101515
+Lac Bleu Variant 3,Luz-Saint-Sauveur,France,4.5,2.0,Easy,300,300,Stunning blue glacial lake in a cirque.,42.74211651325608,-1.3198243706250372
+Ruta de las Ermitas Variant 3,Tella,Spain,4.0,1.5,Easy,200,200,Cultural walk visiting ancient hermitages.,42.6200762468698,-0.52473737517186
+Lac de Gaube Variant 4,Cauterets,France,3.0,1.5,Easy,250,250,Crystal clear alpine lake surrounded by peaks.,42.46101911742239,1.6789306008832878
+Estany de Sant Maurici Variant 4,Espot,Spain,4.5,2.0,Easy,300,300,Iconic lake in Aigüestortes National Park with mountain backdrop.,42.64758845505563,-0.6615333826655965
+Cirque de Gavarnie Variant 4,Gavarnie,France,5.0,2.0,Easy,300,300,UNESCO site with massive cirque walls and waterfalls.,42.41719426055761,-0.9928679476807192
+Ordesa Valley Floor Variant 4,Torla-Ordesa,Spain,6.0,2.5,Easy,350,350,Walk along the lush valley floor with cliffs and waterfalls.,42.85466020103939,0.2130846609714705
+Pont d’Espagne Walk Variant 4,Cauterets,France,2.5,1.0,Easy,150,150,Short stroll to scenic waterfalls and bridges.,42.529389990800006,1.9497765893871026
+Lac d’Estaing Variant 4,Arrens-Marsous,France,3.0,1.0,Easy,100,100,Family-friendly lakeside walk with mountain views.,42.73126114217699,-0.6528065497097486
+Ibones de Anayet Variant 4,Formigal,Spain,5.5,2.5,Easy,350,350,Beautiful alpine lakes with views of Pico Anayet.,42.5558555380447,0.8524744159205748
+Bouillouses Lake Variant 4,Les Angles,France,5.0,2.0,Easy,200,200,Picturesque reservoir with surrounding peaks.,42.6600340105889,1.1656686536505116
+Lac Bleu Variant 4,Luz-Saint-Sauveur,France,4.5,2.0,Easy,300,300,Stunning blue glacial lake in a cirque.,42.673355139671635,-0.6682685960266012
+Ruta de las Ermitas Variant 4,Tella,Spain,4.0,1.5,Easy,200,200,Cultural walk visiting ancient hermitages.,42.49242722776276,1.0487572201415087
+Lac de Gaube Variant 5,Cauterets,France,3.0,1.5,Easy,250,250,Crystal clear alpine lake surrounded by peaks.,42.88479231388228,-0.21275903548261366
+Estany de Sant Maurici Variant 5,Espot,Spain,4.5,2.0,Easy,300,300,Iconic lake in Aigüestortes National Park with mountain backdrop.,42.78756641168056,0.7130704070775282
+Cirque de Gavarnie Variant 5,Gavarnie,France,5.0,2.0,Easy,300,300,UNESCO site with massive cirque walls and waterfalls.,42.8697494707821,0.7173539876631314
+Ordesa Valley Floor Variant 5,Torla-Ordesa,Spain,6.0,2.5,Easy,350,350,Walk along the lush valley floor with cliffs and waterfalls.,42.84741367521382,0.3752113942616546
+Pont d’Espagne Walk Variant 5,Cauterets,France,2.5,1.0,Easy,150,150,Short stroll to scenic waterfalls and bridges.,42.69894998940554,-1.1839858048095708
+Lac d’Estaing Variant 5,Arrens-Marsous,France,3.0,1.0,Easy,100,100,Family-friendly lakeside walk with mountain views.,42.860937117511554,1.423558734562333
+Ibones de Anayet Variant 5,Formigal,Spain,5.5,2.5,Easy,350,350,Beautiful alpine lakes with views of Pico Anayet.,42.44424625102596,-0.37726977259892447
+Bouillouses Lake Variant 5,Les Angles,France,5.0,2.0,Easy,200,200,Picturesque reservoir with surrounding peaks.,42.49799143120957,-0.8471852136005102
+Lac Bleu Variant 5,Luz-Saint-Sauveur,France,4.5,2.0,Easy,300,300,Stunning blue glacial lake in a cirque.,42.42261364445527,-1.3572870045583263
+Ruta de las Ermitas Variant 5,Tella,Spain,4.0,1.5,Easy,200,200,Cultural walk visiting ancient hermitages.,42.56266516538163,0.5681253011588465
+Lac de Gaube Variant 6,Cauterets,France,3.0,1.5,Easy,250,250,Crystal clear alpine lake surrounded by peaks.,42.59433864484474,0.8714752664479883
+Estany de Sant Maurici Variant 6,Espot,Spain,4.5,2.0,Easy,300,300,Iconic lake in Aigüestortes National Park with mountain backdrop.,42.535674515886946,-1.4419425987525034
+Cirque de Gavarnie Variant 6,Gavarnie,France,5.0,2.0,Easy,300,300,UNESCO site with massive cirque walls and waterfalls.,42.814368754575966,0.29232570404748337
+Ordesa Valley Floor Variant 6,Torla-Ordesa,Spain,6.0,2.5,Easy,350,350,Walk along the lush valley floor with cliffs and waterfalls.,42.578376663346795,-0.7072647868072172
+Pont d’Espagne Walk Variant 6,Cauterets,France,2.5,1.0,Easy,150,150,Short stroll to scenic waterfalls and bridges.,42.54046725484369,0.7581047664330747
+Lac d’Estaing Variant 6,Arrens-Marsous,France,3.0,1.0,Easy,100,100,Family-friendly lakeside walk with mountain views.,42.67134804157912,-0.88971749848253
+Ibones de Anayet Variant 6,Formigal,Spain,5.5,2.5,Easy,350,350,Beautiful alpine lakes with views of Pico Anayet.,42.47046211248738,0.9182820833586307
+Bouillouses Lake Variant 6,Les Angles,France,5.0,2.0,Easy,200,200,Picturesque reservoir with surrounding peaks.,42.801098490377015,-0.14642628794811907
+Lac Bleu Variant 6,Luz-Saint-Sauveur,France,4.5,2.0,Easy,300,300,Stunning blue glacial lake in a cirque.,42.437275321839884,1.7785549605785707
+Ruta de las Ermitas Variant 6,Tella,Spain,4.0,1.5,Easy,200,200,Cultural walk visiting ancient hermitages.,42.893443468300255,-1.0186766954890236
+Lac de Gaube Variant 7,Cauterets,France,3.0,1.5,Easy,250,250,Crystal clear alpine lake surrounded by peaks.,42.78612238464833,-0.30626777132409533
+Estany de Sant Maurici Variant 7,Espot,Spain,4.5,2.0,Easy,300,300,Iconic lake in Aigüestortes National Park with mountain backdrop.,42.49935784076708,-1.1028426756579384
+Cirque de Gavarnie Variant 7,Gavarnie,France,5.0,2.0,Easy,300,300,UNESCO site with massive cirque walls and waterfalls.,42.4027610585618,1.7364276639749696
+Ordesa Valley Floor Variant 7,Torla-Ordesa,Spain,6.0,2.5,Easy,350,350,Walk along the lush valley floor with cliffs and waterfalls.,42.80773071422742,1.5706877368334338
+Pont d’Espagne Walk Variant 7,Cauterets,France,2.5,1.0,Easy,150,150,Short stroll to scenic waterfalls and bridges.,42.75342867192381,-0.5972043029969554
+Lac d’Estaing Variant 7,Arrens-Marsous,France,3.0,1.0,Easy,100,100,Family-friendly lakeside walk with mountain views.,42.764503584020495,0.8099441611196267
+Ibones de Anayet Variant 7,Formigal,Spain,5.5,2.5,Easy,350,350,Beautiful alpine lakes with views of Pico Anayet.,42.785635173342975,1.3602777007042555
+Bouillouses Lake Variant 7,Les Angles,France,5.0,2.0,Easy,200,200,Picturesque reservoir with surrounding peaks.,42.43702232586704,0.4432028405981181
+Lac Bleu Variant 7,Luz-Saint-Sauveur,France,4.5,2.0,Easy,300,300,Stunning blue glacial lake in a cirque.,42.579232864272136,0.35377702424602275
+Ruta de las Ermitas Variant 7,Tella,Spain,4.0,1.5,Easy,200,200,Cultural walk visiting ancient hermitages.,42.45793452976256,-0.6535169818484191
+Lac de Gaube Variant 8,Cauterets,France,3.0,1.5,Easy,250,250,Crystal clear alpine lake surrounded by peaks.,42.831551712937795,-1.1741403126793528
+Estany de Sant Maurici Variant 8,Espot,Spain,4.5,2.0,Easy,300,300,Iconic lake in Aigüestortes National Park with mountain backdrop.,42.71164906341378,1.6402551528366436
+Cirque de Gavarnie Variant 8,Gavarnie,France,5.0,2.0,Easy,300,300,UNESCO site with massive cirque walls and waterfalls.,42.56544901242632,1.6514632000716567
+Ordesa Valley Floor Variant 8,Torla-Ordesa,Spain,6.0,2.5,Easy,350,350,Walk along the lush valley floor with cliffs and waterfalls.,42.431779175143014,0.7158551004564377
+Pont d’Espagne Walk Variant 8,Cauterets,France,2.5,1.0,Easy,150,150,Short stroll to scenic waterfalls and bridges.,42.55549116085783,-0.3133957313295477
+Lac d’Estaing Variant 8,Arrens-Marsous,France,3.0,1.0,Easy,100,100,Family-friendly lakeside walk with mountain views.,42.56259166101337,-0.2777664888556868
+Ibones de Anayet Variant 8,Formigal,Spain,5.5,2.5,Easy,350,350,Beautiful alpine lakes with views of Pico Anayet.,42.76480308916903,1.040844876045838
+Bouillouses Lake Variant 8,Les Angles,France,5.0,2.0,Easy,200,200,Picturesque reservoir with surrounding peaks.,42.7187787356776,1.6398859098340197
+Lac Bleu Variant 8,Luz-Saint-Sauveur,France,4.5,2.0,Easy,300,300,Stunning blue glacial lake in a cirque.,42.84360637128816,1.6048024849279106
+Ruta de las Ermitas Variant 8,Tella,Spain,4.0,1.5,Easy,200,200,Cultural walk visiting ancient hermitages.,42.63610746258097,1.2295644105016836
+Lac de Gaube Variant 9,Cauterets,France,3.0,1.5,Easy,250,250,Crystal clear alpine lake surrounded by peaks.,42.45979712296915,0.7471107615400072
+Estany de Sant Maurici Variant 9,Espot,Spain,4.5,2.0,Easy,300,300,Iconic lake in Aigüestortes National Park with mountain backdrop.,42.756622393611494,-1.205510122517329
+Cirque de Gavarnie Variant 9,Gavarnie,France,5.0,2.0,Easy,300,300,UNESCO site with massive cirque walls and waterfalls.,42.780392524308446,-0.9342995006688518
+Ordesa Valley Floor Variant 9,Torla-Ordesa,Spain,6.0,2.5,Easy,350,350,Walk along the lush valley floor with cliffs and waterfalls.,42.680638598784746,1.6449396598447774
+Pont d’Espagne Walk Variant 9,Cauterets,France,2.5,1.0,Easy,150,150,Short stroll to scenic waterfalls and bridges.,42.78548358997728,0.6225017088085649
+Lac d’Estaing Variant 9,Arrens-Marsous,France,3.0,1.0,Easy,100,100,Family-friendly lakeside walk with mountain views.,42.646897798182195,-1.4678103193417962
+Ibones de Anayet Variant 9,Formigal,Spain,5.5,2.5,Easy,350,350,Beautiful alpine lakes with views of Pico Anayet.,42.661366414690995,-1.1448495999688877
+Bouillouses Lake Variant 9,Les Angles,France,5.0,2.0,Easy,200,200,Picturesque reservoir with surrounding peaks.,42.613770509179275,0.8222561918781954
+Lac Bleu Variant 9,Luz-Saint-Sauveur,France,4.5,2.0,Easy,300,300,Stunning blue glacial lake in a cirque.,42.41270956337205,-1.4822844565382347
+Ruta de las Ermitas Variant 9,Tella,Spain,4.0,1.5,Easy,200,200,Cultural walk visiting ancient hermitages.,42.45394571349665,-0.9371718200387547
+Lac de Gaube Variant 10,Cauterets,France,3.0,1.5,Easy,250,250,Crystal clear alpine lake surrounded by peaks.,42.415714592843365,0.42056826278305137
+Estany de Sant Maurici Variant 10,Espot,Spain,4.5,2.0,Easy,300,300,Iconic lake in Aigüestortes National Park with mountain backdrop.,42.71820520563189,0.9216331919244265
+Cirque de Gavarnie Variant 10,Gavarnie,France,5.0,2.0,Easy,300,300,UNESCO site with massive cirque walls and waterfalls.,42.557177990538165,0.7818644082591018
+Ordesa Valley Floor Variant 10,Torla-Ordesa,Spain,6.0,2.5,Easy,350,350,Walk along the lush valley floor with cliffs and waterfalls.,42.65428534558235,-0.7150574168880408
+Pont d’Espagne Walk Variant 10,Cauterets,France,2.5,1.0,Easy,150,150,Short stroll to scenic waterfalls and bridges.,42.85378323696305,0.9926272747163756
+Lac d’Estaing Variant 10,Arrens-Marsous,France,3.0,1.0,Easy,100,100,Family-friendly lakeside walk with mountain views.,42.52464611457444,-0.6696281937611998
+Ibones de Anayet Variant 10,Formigal,Spain,5.5,2.5,Easy,350,350,Beautiful alpine lakes with views of Pico Anayet.,42.60519146151781,-0.36110105644256296
+Bouillouses Lake Variant 10,Les Angles,France,5.0,2.0,Easy,200,200,Picturesque reservoir with surrounding peaks.,42.777775569271526,1.1127199179130844
+Lac Bleu Variant 10,Luz-Saint-Sauveur,France,4.5,2.0,Easy,300,300,Stunning blue glacial lake in a cirque.,42.51439908274581,0.7737151466652512
+Ruta de las Ermitas Variant 10,Tella,Spain,4.0,1.5,Easy,200,200,Cultural walk visiting ancient hermitages.,42.438489954914395,1.472281936729623

@@ -1,0 +1,145 @@
+
+/* Clean dark theme without changing existing HTML/JS structure */
+:root{
+  --bg: #0b0b0c;
+  --panel: #141416;
+  --muted: #a0a0a8;
+  --text: #e8e8ef;
+  --accent: #4da3ff;
+  --accent-2: #7bd389;
+  --border: #24242a;
+  --card: #1a1b1e;
+  --shadow: 0 8px 24px rgba(0,0,0,.35);
+  --radius: 14px;
+}
+
+/* Base */
+html, body{ height:100%; }
+body{
+  background: radial-gradient(1200px 600px at 10% -10%, #16181f 20%, transparent 50%),
+              radial-gradient(900px 500px at 110% 10%, #1a1d26 20%, transparent 50%),
+              var(--bg);
+  color: var(--text);
+  font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+  margin:0;
+  line-height:1.6;
+}
+
+/* Top nav */
+nav{
+  position: sticky;
+  top:0;
+  z-index:10;
+  backdrop-filter: blur(8px);
+  background: linear-gradient(180deg, rgba(20,20,22,.9), rgba(20,20,22,.75));
+  border-bottom: 1px solid var(--border) !important;
+  display:flex;
+  gap:.5rem;
+  justify-content:center;
+  padding:.5rem;
+  box-shadow: var(--shadow);
+}
+nav button{
+  background: var(--card) !important;
+  color: var(--text) !important;
+  border: 1px solid var(--border) !important;
+  padding: .6rem 1rem !important;
+  border-radius: 999px !important;
+  font-weight:600 !important;
+  transition: transform .08s ease, background .2s ease;
+}
+nav button:hover{ transform: translateY(-1px); }
+nav button.active{ background: #222735 !important; border-color: #2b3040 !important; }
+
+/* Search bar */
+#searchBarContainer{
+  max-width: 1100px;
+  margin: 14px auto 0;
+  padding: 0 12px;
+  display:flex;
+  align-items:center;
+  gap:.75rem;
+}
+#globalSearch{
+  flex:1;
+  background: var(--panel);
+  color: var(--text);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: .7rem .9rem;
+  outline: none;
+  font-size: 0.95rem;
+  box-shadow: inset 0 0 0 1px rgba(255,255,255,.02);
+}
+#globalSearch::placeholder{ color: #80808a; }
+#searchBarContainer small{ color: var(--muted); }
+
+/* Tabs */
+.tab{
+  display:none;
+  padding: 18px;
+  max-width: 1100px;
+  margin: 8px auto 28px;
+  background: var(--panel);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+}
+
+/* Table */
+table{
+  width:100%;
+  border-collapse: collapse;
+  border-spacing:0;
+  overflow:hidden;
+  border: 1px solid var(--border);
+  background: var(--card);
+  border-radius: 12px;
+}
+th, td{
+  padding: 12px 14px;
+  border-bottom: 1px solid var(--border);
+  vertical-align: top;
+}
+th{
+  position: sticky;
+  top: 0;
+  background: #1e2230;
+  color: var(--text);
+  text-align:left;
+  z-index:1;
+}
+tr:nth-child(even) td{ background: #181a21; }
+tr:hover td{ background: #1b1f2b; }
+a.hike-link{
+  color: var(--accent);
+  font-weight:600;
+  text-decoration: none;
+}
+a.hike-link:hover{ text-decoration: underline; }
+
+/* Map */
+#mapContainer{
+  height: 75vh;
+  width: 100%;
+  border: 1px solid var(--border) !important;
+  border-radius: 12px;
+  overflow:hidden;
+  box-shadow: var(--shadow);
+}
+
+/* Popups */
+.popup-content{ font-size: 14px; line-height: 1.45; }
+.popup-title{ font-weight: 700; font-size: 16px; margin-bottom: 4px; color: var(--text); }
+.popup-info{ color: var(--muted); margin-bottom: 6px; }
+.popup-link{
+  display:inline-block;
+  margin-top:6px;
+  padding:6px 10px;
+  background:#202636;
+  color: var(--text);
+  text-decoration:none;
+  border-radius: 10px;
+  border:1px solid #2a3246;
+}
+.popup-link:hover{ background:#222b3f; }
