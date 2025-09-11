@@ -1,2 +1,66 @@
-Name,Location,Country,Description,Latitude,Longitude
-Roller Coaster,Tibidabo Amusement Park,Spain,Test roller coaster attraction,41.4222,2.1186
+Name,Location,Country,Description,Lat,Lng
+Efteling Theme Park,Kaatsheuvel,Netherlands,Largest fairytale theme park in the Netherlands,51.649,5.043
+Madurodam Miniature Park,The Hague,Netherlands,Famous miniature city with Dutch landmarks,52.099,4.301
+Keukenhof Gardens,Lisse,Netherlands,World-famous tulip gardens (spring season),52.27,4.546
+Kinderdijk Windmills,Kinderdijk,Netherlands,UNESCO heritage site with 19 windmills,51.889,4.636
+Zaanse Schans,Zaandam,Netherlands,Open-air museum with windmills and craft shops,52.473,4.816
+NEMO Science Museum,Amsterdam,Netherlands,Interactive science center for families,52.374,4.912
+ARTIS Royal Zoo,Amsterdam,Netherlands,Historic zoo with aquarium and planetarium,52.366,4.912
+Burgers' Zoo,Arnhem,Netherlands,Large zoo with immersive biomes,51.99,5.903
+Dolfinarium,Harderwijk,Netherlands,Marine park with dolphin and sea lion shows,52.351,5.617
+Giethoorn Boat Tours,Giethoorn,Netherlands,Canal village best explored by boat,52.741,6.079
+Ouwehands Zoo (Pandasia),Rhenen,Netherlands,Zoo famous for its giant pandas,51.966,5.568
+Avonturenpark Hellendoorn,Hellendoorn,Netherlands,Family theme park with rides and shows,52.391,6.453
+Walibi Holland,Biddinghuizen,Netherlands,Thrilling theme park with roller coasters,52.451,5.768
+Duinrell Amusement Park,Wassenaar,Netherlands,Theme park with indoor/outdoor waterpark,52.154,4.382
+Apenheul Primate Park,Apeldoorn,Netherlands,Zoo specializing in primates,52.215,5.946
+Hoge Veluwe National Park (Museonder),Otterlo,Netherlands,"Park with art museum, wildlife and free bikes",52.098,5.829
+Louwman Museum,The Hague,Netherlands,Unique collection of historic cars,52.093,4.351
+Van Gogh Museum,Amsterdam,Netherlands,World’s largest Van Gogh collection,52.358,4.881
+Rijksmuseum,Amsterdam,Netherlands,National museum of art and history,52.36,4.885
+Mauritshuis,The Hague,Netherlands,Vermeer’s Girl with a Pearl Earring,52.08,4.315
+Spoorwegmuseum (Railway Museum),Utrecht,Netherlands,Interactive train museum,52.088,5.131
+Het Loo Palace,Apeldoorn,Netherlands,Royal palace with baroque gardens,52.233,5.958
+Marker Wadden Visitor Harbor,Lelystad,Netherlands,New man-made bird islands,52.563,5.401
+Ecomare,Texel,Netherlands,Seal sanctuary and nature museum,53.071,4.761
+Afsluitdijk Wadden Center,Kornwerderzand,Netherlands,Exhibits on the dike and Wadden Sea,53.066,5.337
+Deltapark Neeltje Jans,Vrouwenpolder,Netherlands,Delta Works theme park and sea life,51.627,3.7
+Markthal,Rotterdam,Netherlands,Iconic indoor market hall,51.922,4.481
+Euromast,Rotterdam,Netherlands,Observation tower with views,51.905,4.468
+Maritime Museum Rotterdam,Rotterdam,Netherlands,"Shipping, harbor and maritime history",51.92,4.48
+Cube Houses (Kubuswoningen),Rotterdam,Netherlands,Architectural landmark,51.922,4.489
+Muiderslot Castle,Muiden,Netherlands,Medieval castle near Amsterdam,52.331,5.07
+Paleis Soestdijk,Baarn,Netherlands,Former royal residence,52.183,5.277
+Dom Tower,Utrecht,Netherlands,Climb the tallest church tower in NL,52.09,5.121
+Valkenburg Caves,Valkenburg,Netherlands,Underground corridors and Christmas markets,50.865,5.83
+GaiaZOO,Kerkrade,Netherlands,Award-winning zoo in Limburg,50.866,6.061
+Toverland,Sevenum,Netherlands,Theme park with indoor/outdoor areas,51.394,5.983
+Archeon,Alphen aan den Rijn,Netherlands,Living history park,52.128,4.656
+Aviodrome,Lelystad,Netherlands,Aviation museum and planes,52.455,5.527
+Nationaal Militair Museum,Soest,Netherlands,Military history and aircraft,52.112,5.275
+Bataviawerf,Lelystad,Netherlands,Replica VOC shipyard & museum,52.51,5.437
+Anne Frank House,Amsterdam,Netherlands,Historic canal house and museum,52.375,4.883
+Heineken Experience,Amsterdam,Netherlands,Interactive brewery tour,52.357,4.891
+Micropia,Amsterdam,Netherlands,Museum of microbes (next to ARTIS),52.366,4.912
+Hortus Botanicus Amsterdam,Amsterdam,Netherlands,Historic botanical garden,52.366,4.913
+Utrecht Botanic Gardens,Utrecht,Netherlands,Fort Hoofddijk botanical garden,52.085,5.176
+Groninger Museum,Groningen,Netherlands,Contemporary art museum,53.212,6.566
+Drents Museum,Assen,Netherlands,Archaeology and fine arts,52.995,6.562
+Martinitoren,Groningen,Netherlands,Climb the landmark tower,53.219,6.568
+Biesbosch MuseumEiland,Werkendam,Netherlands,Museum about Biesbosch wetlands,51.81,4.832
+Sealcenter Pieterburen,Pieterburen,Netherlands,Seal rescue and rehabilitation center,53.392,6.45
+Kasteel de Haar,Haarzuilens,Netherlands,Largest castle in the Netherlands,52.121,5.012
+Kröller-Müller Museum,Otterlo,Netherlands,Van Gogh collection & sculpture garden,52.095,5.816
+Panorama Mesdag,The Hague,Netherlands,360° panorama painting,52.083,4.3
+Scheveningen Pier,Scheveningen,Netherlands,Seaside pier with attractions,52.113,4.283
+SnowWorld,Zoetermeer,Netherlands,Indoor ski slopes,52.06,4.495
+Miniworld Rotterdam,Rotterdam,Netherlands,Model railways and miniature landscapes,51.922,4.47
+Eusebius Church,Arnhem,Netherlands,Panorama lift with glass balconies,51.981,5.912
+Nijntje Museum,Utrecht,Netherlands,Dick Bruna’s Miffy museum for kids,52.083,5.126
+CORPUS ‘Journey through the Human Body’,Oegstgeest,Netherlands,Interactive anatomy museum,52.17,4.444
+Naturalis Biodiversity Center,Leiden,Netherlands,Natural history museum,52.166,4.474
+Teylers Museum,Haarlem,Netherlands,Oldest museum in the Netherlands,52.381,4.637
+Frans Hals Museum,Haarlem,Netherlands,Golden Age art museum,52.381,4.633
+Waterliniemuseum Fort bij Vechten,Bunnik,Netherlands,New Dutch Waterline museum,52.033,5.196
+Museum Speelklok,Utrecht,Netherlands,Self-playing musical instruments,52.089,5.119
+Museum 't Olde Maat Uus,Giethoorn,Netherlands,Local museum about life in Giethoorn,52.74,6.083
